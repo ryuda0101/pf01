@@ -1,0 +1,82 @@
+<% if(!userData){ %>
+    <script>
+        alert("비회원은 접근할수 없는 페이지 입니다.")
+        location.href = "/login";
+    </script>
+<% } %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- 아이콘 관련 링크 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+    <!-- 폰트 관련 링크 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet">
+
+    <!-- 폰트 관련 링크 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- 파비콘 관련 링크 -->
+    <link rel="shortcut icon" href="img/favicon_.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon_.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include("common/subpage_header") %>
+    <%- include("common/contact_banner.ejs") %>
+
+    <div id="brd_insert">
+        <div class="center">
+            <div class="boxs">
+                <div class="box">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>Reservation</p>
+                    <p>+82 287 - 465 - 0659</p>
+                </div>
+                <div class="box">
+                    <i class="fa-regular fa-envelope"></i>
+                    <p>Email Info</p>
+                    <p>info@grandhotel.com</p>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Address</p>
+                    <p>360 Harvest St, North Subract, London. United<br>States Of Amrica</p>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <p>Web</p>
+                    <p>info@luxuryhotel.com</p>
+                </div>
+            </div>
+            <form action="/add" method="post" enctype="multipart/form-data">
+                <div class="line">
+                    <input type="text" name="name" placeholder="Name" value="<%- userData.joinnick %>" disabled>
+                    <input type="text" name="email" placeholder="Email">
+                </div>
+                <div class="line">
+                    <input type="text" class="title" name="title" placeholder="Title">
+                    <input type="text" name="number" placeholder="Number">
+                </div>
+                <div class="line">
+                    <input type="file" name="file" class="file">
+                </div>
+                <textarea name="message" placeholder="Write message"></textarea>
+                <button type="submit">SEND MESSAGE</button>
+            </form>
+        </div>
+    </div>
+    <%- include("common/footer.ejs") %> 
+    <script src="js/insert.js"></script>
+</body>
+</html>

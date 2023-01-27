@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms</title>
+        <!-- 아이콘 관련 링크 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+        <!-- 폰트 관련 링크 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet">
+    
+        <!-- 폰트 관련 링크 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- 스크롤시 등장효과 AOS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <!-- 파비콘 관련 링크 -->
+        <link rel="shortcut icon" href="img/favicon_.ico" type="image/x-icon">
+        <link rel="icon" href="img/favicon_.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <%- include("common/subpage_header.ejs") %>
+    <div id="slideWrap">
+        <div class="view">
+            <h2 class="room_name">Double Room</h2>
+            <div class="point_btns">
+                <img class="right" src="/img/right.png">
+                <img class="left" src="/img/left.png">
+            </div>
+            <div class="circle_btns">
+                <span class="on"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="box">
+                <img src="/img/rooms_f_slide01.png">
+            </div>
+            <div class="box">
+                <img src="/img/rooms_f_slide02.png">
+            </div>
+            <div class="box">
+                <img src="/img/rooms_f_slide03.png">
+            </div>
+            <div class="box">
+                <img src="/img/rooms_f_slide04.png">
+            </div>
+            <div class="box">
+                <img src="/img/rooms_slide07.png">
+            </div>
+        </div>
+    </div>
+    <div id="rooms">
+        <div class="room">
+            <div class="center">
+                <div class="left" data-aos="fade-right" data-aos-duration="1000">
+                    <h2  data-aos="fade-right" data-aos-duration="1000">Double Room</h2>
+                    <div class="decor">
+                        <h3>Décor</h3>
+                        <p>호텔 그랜드는 전 객실에 정교하고 독창적인 프리미엄침구 Le Blanc을 사용하고있습니다. Le Blanc은 고객 한분만을 위한 맞춤 제작을 통해 핸드메이드 100% 천연 면 소재로 최상급 품질의 침구를 제공하는 세계적인 프리미엄 침구 브랜드 입니다. 그랜드 호텔은 모든 고객에게 최고의 수면경험을 제공하기 위해 Le Blanc과 파트너십을 진행해 호텔 전 객실에서 프리미엄 침구를 만날 수 있습니다. </p>
+                        <p>Le Blanc M은 Le Blanc 침대의 혁신 기술이 집약된 프리미엄 라인의 매트리스 입니다. 세계 특허 하이브리드 Z스프링이 디리는 편안함과 오가닉 코튼원단, 천연 양모, 말털등 엄선된 천연 소재가 드리는 쾌적함을 경험해보세요. 조용하고 프라이빗한 공간에서언제나 최상의 컨디션을 제공합니다. 바다를 한눈에 감상하며 오후 햇살을 즐길 수 있는 탁트인 오션뷰 최상위 럭셔리 객실에서 지금껏 경험하지 못한 서비스를 만나보세요.</p>
+                    </div>
+                    <div class="view">
+                        <h3>Room Feature</h3>
+                        <ul>
+                            <li>최상의 숙면을 위한 Le Blanc의 침대 및 침구류</li>
+                            <li>전 객실 초고속 무료 인터넷 (유선, 와이파이)</li>
+                            <li>비즈니스 코너 인터넷 무료 이용</li>
+                            <li>투숙기간 내 무료 주차 가능</li>
+                            <li>전 객실 TV, 전화기, 사무용 데스크 구비</li>
+                            <li>그 외에 슬리퍼, 욕실용품, 가운, 헤어드라이어 제공</li>
+                        </ul>
+                    </div>
+                    <div class="children">
+                        <h3>Children and Extra Beds</h3>
+                        <p>아이와 함께 하시는 고객님들께는 어린아이 전용 어메니티를 제공해 드립니다. 호텔 그랜드는 사랑하는 반려견과 함께할 수 있는 전용 객실로 Le Blanc Clean 대표 4종 제품 설치로 더욱 쾌적한 펫 프렌들리 룸을 제공하고 있습니다. 객실 호텔내 반려동물 동반 입장은 일부 객실에 한해서만 가능합니다. 예약전 호텔측에 문의해주세요. 또한 전 객실에는 Extra Bed가 추가제공됩니다. 예약전 호텔측에 문의주시면 미리 준비해드리겠습니다.</p>
+                    </div>
+                    <a href="#">CHECK NOW</a>
+                </div>
+                <div class="right" data-aos="fade-left" data-aos-duration="1000">
+                    <h3>Amenity</h3>
+                    <div class="amenity">
+                        <div class="top">
+                            <div class="box">
+                                <i class="fa-solid fa-bed"></i>
+                                <p>Double Bed</p>
+                            </div>
+                            <div class="box">
+                                <i class="fa-solid fa-bath"></i>
+                                <p>Bathtub</p>
+                            </div>
+                        </div>
+                        <div class="bot">
+                            <div class="box">
+                                <i class="fa-solid fa-tree-city"></i>
+                                <p>City View</p>
+                            </div>
+                            <div class="box">
+                                <i class="fa-solid fa-users"></i>
+                                <p>1-2 Persons</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include("common/footer.ejs") %>
+    
+    <!-- 상단 슬라이드 동작 -->
+    <script src="/js/rooms_banner.js"></script>
+
+    <!-- 스크롤시 등장효과 AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>

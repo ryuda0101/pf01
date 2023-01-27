@@ -1,0 +1,89 @@
+<div id="header">
+    <div class="top_box">
+        <div class="center">
+            <% if(!userData){ %>
+                <div class="login_btn">
+                    <a href="/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                </div>
+                <div class="register_btn">
+                    <a href="/register"><i class="fa-solid fa-user"></i> Register</a>
+                </div>
+            <% } else { %>
+                <p><a href="/userInfo">안녕하세요 <%- userData.joinnick %> 님</a></p>
+                <span></span>
+                <a href="/logout">로그아웃</a>
+            <% } %>
+        </div>
+    </div>
+    <div class="bot_box bgColor">
+        <div class="center">
+            <h1 class="logo"><a href="/"><img src="/img/logo.png"></a></h1>
+            <ul class="gnb">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/about_us">ABOUT</a></li>
+                <li class="rooms">
+                    <a href="/junior_suite">ROOMS & SUITES</a>
+                    <ul class="room_gnb">
+                        <li><a href="/junior_suite">Junior Suite</a></li>
+                        <li><a href="/family_room">Family Room</a></li>
+                        <li><a href="/double_room">Double Room</a></li>
+                        <li><a href="/deluxe_room">Deluxe Room</a></li>
+                        <li><a href="/superior_room">Superior Room</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="restaurant_gnb">FACILITY</a></li>
+                <li><a href="#" class="news_gnb">NEWS</a></li>
+                <li><a href="/brdlist">CONTACT</a></li>
+            </ul>
+            <div class="ham_menu">
+                <span class="first"></span>
+                <span class="mid"></span>
+                <span class="last"></span>
+            </div>
+        </div>
+    </div>
+    <div class="ham_gnb">
+        <div class="gnb_wrap">
+            <ul class="gnb">
+                <div class="hamUserInfo">
+                    <% if(!userData){ %>
+                        <div class="login_btn">
+                            <a href="/login"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                        </div>
+                        <div class="register_btn">
+                            <a href="/register"><i class="fa-solid fa-user"></i> Register</a>
+                        </div>
+                    <% } else { %>
+                        <div class="login">
+                            <p><a href="/userInfo">안녕하세요 <%- userData.joinnick %> 님</a></p>
+                            <span></span>
+                            <a class="log_out" href="/logout">로그아웃</a>
+                        </div>
+                    <% } %>
+                </div>
+                <li>
+                    <a href="/">HOME</a>
+                </li>
+                <li>
+                    <a href="/about_us">ABOUT</i></a>
+                </li>
+                <li>
+                    <a href="#" class="rooms_gnb">ROOMS & SUITES</a>
+                </li>
+                <li>
+                    <a href="#" class="restaurant_gnb">FACILITY</a>
+                </li>
+                <li>
+                    <a href="#" class="news_gnb">NEWS</a>
+                </li>
+                <li>
+                    <a href="/brdlist">CONTACT</a>
+                </li>
+            </ul>
+            <div class="close_btn">
+                <span class="first"></span>
+                <span class="last"></span>
+            </div>
+        </div>
+    </div>
+</div>

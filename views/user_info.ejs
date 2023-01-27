@@ -1,0 +1,68 @@
+<% if (!userData){ %>
+    <script>
+        alert("비회원은 접근할 수 없는 페이지 입니다.");
+        location.href = "/login";
+    </script>
+<% } %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <!-- 아이콘 관련 링크 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+    <!-- 폰트 관련 링크 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet">
+    
+    <!-- 폰트 관련 링크 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- 파비콘 관련 링크 -->
+    <link rel="shortcut icon" href="img/favicon_.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon_.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <%- include("common/subpage_header") %>
+    <%- include("common/banner") %>
+
+    <div id="login_page" class="userChg">
+        <div class="center">
+            <div class="left_box">
+                <h2 class="chgProfile">Change Your Profile</h2>
+                <form class="loginForm" action="/userInfoChg" method="post">
+                    <div class="line">
+                        <input type="text" name="username" class="username" placeholder="<%- userData.joinnick %>">
+                    </div>
+                    <div class="line">
+                        <input type="text" name="userid" class="userid" value="<%- userData.joinid %>" disabled>
+                    </div>
+                    <div class="line">
+                        <input type="password" name="userpass" class="userpass">
+                    </div>
+                    <div class="btns">
+                        <button type="submit">SAVE</button>
+                        <a class="button" href="/">CANCEL</a>
+                    </div>
+                </form>
+            </div>
+            <div class="right_box">
+                <img src="/img/login_img3.png">
+                <div class="text_box">
+                    <h3>Join with us</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include("common/footer") %>
+</body>
+</html>

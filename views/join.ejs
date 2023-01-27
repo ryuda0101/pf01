@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <!-- 아이콘 관련 링크 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- 폰트 관련 링크 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet">
+
+    <!-- 폰트 관련 링크 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- 파비콘 관련 링크 -->
+    <link rel="shortcut icon" href="img/favicon_.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon_.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="login_page">
+        <div class="center">
+            <div class="left_box">
+                <h2>Create an account</h2>
+                <div class="btns" id="Register_btns">
+                    <a class="loginBtn" id="loginBtn" href="/login">LOGIN</a>
+                    <span></span>
+                    <a id="registerBtn" href="/register">REGISTER</a>
+                </div>
+                <form class="loginForm" action="/userJoin" method="post">
+                    <div class="line">
+                        <input type="text" name="username" class="username" placeholder="Full Name">
+                    </div>
+                    <div class="line">
+                        <input type="text" name="userid" class="userid" placeholder="Email Address">
+                        <span class="idCheck"></span>
+                    </div>
+                    <div class="line">
+
+                        <input type="password" name="userpass" class="userpass" placeholder="Password">
+                        <span class="passCheck"></span>
+                    </div>
+                    <div class="btns">
+                        <button type="submit">REGISTER</button>
+                        <a class="button" href="/">CANCEL</button>
+                    </div>
+                </form>
+                <a href="/login">Already a member? Login here</a>
+            </div>
+            <div class="right_box">
+                <img src="/img/login_img3.png">
+                <div class="text_box">
+                    <h3>Join with us</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/idCheck.js"></script>
+</body>
+</html>
